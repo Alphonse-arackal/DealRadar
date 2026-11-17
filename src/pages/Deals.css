@@ -1,0 +1,124 @@
+.deals-page {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 55px 0 80px;
+}
+
+.deals-header {
+  margin-bottom: 30px;
+}
+
+.deals-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-primary);
+}
+
+.deals-header h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 12px 0;
+  color: var(--text-primary);
+}
+
+.deals-header p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.deals-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.deals-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  height: 48px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.deals-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.deals-filter-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.deals-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.deals-results h2 {
+  font-size: 21px;
+  margin: 0 0 5px;
+  color: var(--text-primary);
+}
+
+.deals-results p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.deals-product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.deals-empty {
+  padding: 70px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1000px) {
+  .deals-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .deals-page {
+    padding-top: 35px;
+  }
+
+  .deals-toolbar {
+    flex-direction: column;
+  }
+
+  .deals-filter-button {
+    height: 44px;
+    justify-content: center;
+  }
+
+  .deals-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
